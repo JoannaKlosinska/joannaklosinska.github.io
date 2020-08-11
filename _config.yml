@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Begginer Developer
+title: Junior Developer
 email: joanna.klosinska.55@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome to my website! I am starting my adventure as a software developer and this site help me 
   with learning. You can find here some information about programming in Ruby. Hope that you like it!
-baseurl: "my-blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: JoannaKlosinska
 
