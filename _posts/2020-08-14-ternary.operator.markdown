@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "Ternary operator"
+date:   2020-08-14 15:15:55 +0200
+categories: ruby
+---
+It is good to remember to make your codes shorter. When you working on big application, where there so many files and lines of codes in them, it is very important. Start to do it during your learning so you will have good habits in your future.<br>One of the ways to make your code shorter, it's <strong>ternary operator</strong>. You can use it in else/if statements. Here you have structure of it: 
+
+{% highlight ruby %}
+if boolean?
+	do_something
+else
+	do_something_else
+end
+
+Means exactly the same as:
+
+boolean ? do_something : do_something_else
+
+Or easier: 
+
+condition ? True : false
+{% endhighlight %}
+
+I will give you also a practical example:
+
+{% highlight ruby %}
+flower_price = 50
+
+if flower_price < 100
+  puts "Let's buy flowers!"
+else
+ puts "Don't buy flowers today :("
+end
+
+Instead of this, you can write just:
+
+puts flower_price < 100? "Let's buy flowers!" : "Don't buy flowers today :("
+{% endhighlight %}

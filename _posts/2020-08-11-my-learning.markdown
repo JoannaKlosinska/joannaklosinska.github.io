@@ -2,6 +2,7 @@
 layout: post
 title:  "My learning"
 date:   2020-08-11 12:43:55 +0200
+categories: ruby
 ---
 I started my learning with [Codecademy][codecademy] tutorials. When I decided to learn Ruby language, that was my first course which I did on this site. In my opinion this is very good way to start, because you can learn from very beginning about the basics of specific language in nice, interactive platform. In Codecademy you have a lot of free tutorials, but if you want to learn more about something, you can pay for pro account.
 
