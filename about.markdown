@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: post
 title: About
-permalink: /about/
+permalink: /about.html
 ---
 
 My name is Joanna and I decided to start learning Ruby, because it is begginer-friendly language and you can make a lot of different web applications with it.
