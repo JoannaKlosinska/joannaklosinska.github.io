@@ -35,7 +35,10 @@
     display: inline-block;
     width: 100%;
     text-align: center;
-    border-top: 2px solid gray;
+  }
+  footer a {
+    color: gray;
+    font-size: 1rem;
   }
 
   /* Style the navigation menu */
@@ -82,7 +85,7 @@
     background-color: #D6EAF8;
     color: white;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 400px) {
     main {
       width: 100%;
     }
@@ -115,7 +118,9 @@
         {{ content }}
     </main>
     <footer>
-      <span> Copyright &copy; 2020 Joanna Klosinska</span>
+      <span>Copyright &copy; 2020 Joanna Klosinska</span><br>
+      <span>Made with &#x2764;, <a href="https://jekyllrb.com/">Jekyll</a> and 
+        <a href="https://pages.github.com/">GitHub Pages</a></span>
     </footer>
   </div>
   <script>
@@ -130,3 +135,5 @@
   </script>
   </div>
 </body>
+
+

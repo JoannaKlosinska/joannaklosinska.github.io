@@ -10,7 +10,7 @@ Next, I did HTML and CSS courses. It is important to know at least the basics fr
 
 After that I started my adventure with <b>[Ruby on Rails Tutorial][ruby-on-rails-tutorial]</b> from Michael Hartl. This book is like a bible for beginner Ruby developer :) It takes time to do everything from this tutorial, but it's worth it. When you finish this book, you have complete and working application.
 
-Now I am trying to create working application on my own. It is also very good kind of learning for me. Of course I don't know everything now, so I need to googling some answers for my questions, watching tutorials on YouTube or asking experienced developers.
+Now I am trying to create working application on my own. It is also very good kind of learning for me. Of course I don't know everything now, so sometimes I need to googling answers for my questions, watching tutorials on YouTube or asking experienced developers.
 
 I have a plan to write on this blog every new thing I learn :)
 
