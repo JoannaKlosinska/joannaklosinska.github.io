@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "About authentication"
+title:  "About Authentication"
 date:   2020-08-12
 categories: ruby
 ---

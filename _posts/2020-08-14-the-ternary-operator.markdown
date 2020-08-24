@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ternary operator"
+title:  "The Ternary Operator"
 date:   2020-08-14
 categories: ruby
 ---

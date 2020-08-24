@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Date formatting"
+title:  "Date Formatting"
 date:   2020-08-19
 categories: ruby
 ---
