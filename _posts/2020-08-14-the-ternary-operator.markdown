@@ -4,7 +4,7 @@ title:  "The Ternary Operator"
 date:   2020-08-14
 categories: ruby
 ---
-It is good to remember to make your codes shorter. It is very important when you working on big applications with so many files and lines of codes. Remember about this rule during your learning and you will have good habits in your future.<br>One of the ways to make your code shorter, is <b>ternary operator</b>. You can use it in else/if statements. Here you have structure of it: 
+It is good to remember to make your codes more compact. It is very important when you working on big applications with so many files and lines of codes. Remember about this rule during your learning and you will have good habits in your future.<br>One of the ways to make your code shorter, is <b>the ternary operator</b>. You can use it in else/if statements. Here you have structure of it: 
 
 {% highlight ruby %}
 if boolean?

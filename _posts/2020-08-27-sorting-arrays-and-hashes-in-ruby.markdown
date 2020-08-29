@@ -4,7 +4,7 @@ title:  "Sorting Arrays And Hashes In Ruby"
 date:   2020-08-27
 categories: ruby
 ---
-If you read my previous posts, you could see there that I am working on calendar application where users can booking dates for their trainings. There is a card on the page where user can see all of his bookings. It was important for me that have all of these reservation in good sequence. Fortunately, in Ruby we have <b>sort methods</b>.<br>
+If you read my previous posts, you could see there that I am working on a calendar application where users can booking dates for their trainings. There is a card on the page where user can see all of his bookings. It was important for me that have all of these reservation in good sequence. Fortunately, in Ruby we have <b>sort methods</b>.<br>
 There are:
 <div class="list">
 <ul>
