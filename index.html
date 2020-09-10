@@ -1,15 +1,20 @@
 ---
 layout: post
 ---
-<aside>
-  <p>Welcome to my website! I am starting my adventure as a software developer and this site help me 
-   with learning. You can find here some information about programming in Ruby. Hope that you like it!</p>
-</aside>
 
-<h1>Recent Posts</h1>
-{% for post in paginator.posts %}
-<li><a href="{{ post.url}}">{{post.title}}</a><br><span>{{ post.date | date: "%Y-%m-%d" }}</span></li>
-{% endfor %}
+<div class="flexbox-container">
+  <div class="flexbox-item flexbox-item-1">
+    <p>Welcome to my website! I am starting my adventure as a software developer and this site help me 
+    with learning. You can find here some information about programming in Ruby. Hope that you like it!</p>
+  </div>
+
+  <div class="flexbox-item flexbox-item-2">
+    <h1>Recent Posts</h1>
+    {% for post in paginator.posts %}
+    <li><a href="{{ post.url}}">{{post.title}}</a><br><span>{{ post.date | date: "%Y-%m-%d" }}</span></li>
+    {% endfor %}
+  </div>
+</div>
  
 <div class="pagination">
   {% if paginator.previous_page %}
@@ -19,9 +24,6 @@ layout: post
   {% else %}
     <span class="previous">Previous</span>
   {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next">Next</a>
   {% else %}

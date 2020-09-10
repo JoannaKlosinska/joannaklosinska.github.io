@@ -2,10 +2,6 @@
 ---
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-  .container {
-    margin: auto;
-    max-width: 1200px;
-  }
   a, p, h1, h2, h3, h4, h5, h6, span {
     font-family: Lato,"Helvetica Neue",sans-serif;
     color: #424949;
@@ -16,44 +12,49 @@
   }
   li {
     list-style-type: none;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0;
   }
   span {
     color: gray; 
   }
-  main {
-    float: left;
-    background-color: white;
-    min-height: 300px;
-    max-width: 70%;
+  .list {
+    font-family: Lato,"Helvetica Neue",sans-serif;
+    color: #424949;
+    font-size: 1.2rem;
   }
-  aside {
-    float: right;
-    width: 25%;
-    min-height: 300px;
+  .flexbox-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
   }
-  footer {
+  .flexbox-item {
+    width: 1200px;
+  }
+  .flexbox-item-1 {
+    height: 100px;
+    padding: 10px;
+  }
+  .flexbox-item-2 {
+    padding: 10px; 
+  }
+  .footer {
     display: inline-block;
     width: 100%;
     text-align: center;
+    padding: 20px;
   }
-  footer a {
+  .footer a {
     color: gray;
     font-size: 1rem;
   }
-  .list li {
-    font-family: Lato,"Helvetica Neue",sans-serif;
-    color: #424949;
-    list-style-type: disc;
-    font-size: 1.2rem;
-    padding: 0;
+  .main {
+    margin: auto;
   }
   /* Style the navigation menu */
   .topnav {
     overflow: hidden;
     background-color: #D6EAF8;
     position: relative;
-    border-bottom: 2px black;
   }
 
   /* Hide the links inside the navigation menu (except for logo/home) */
@@ -82,7 +83,7 @@
   }
 
   /* Add a grey background color on mouse-over */
-   .topnav a:hover {
+  .topnav a:hover {
     background-color: #AED6F1;
     color: black;
   }
@@ -93,45 +94,53 @@
     color: white;
   }
   @media (max-width: 400px) {
-    main {
-      width: 100%;
-    }
-    aside {
+    .main {
       width: 100%;
     }
   }
 
+  /* Pagination */
+  .pagination a, .pagination span {
+    padding: 7px 18px;
+    border: 1px solid #eee;
+    margin-left: -2px;
+    margin-right: -2px;
+    background-color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .pagination a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+
+
 </style>
 
 <body>
-  <div class="container">
-    <header>
-      <!-- Top Navigation Menu -->
-      <div class="topnav">
-        <a href="/index.html" class="active">Junior Developer</a>
-        <!-- Navigation links (hidden by default) -->
-          <div id="myLinks">
-            <a href="/contact.html">Contact</a>
-            <a href="/about.html">About</a>
-          </div>
-      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        Menu
-        </a>
+  <!-- Top Navigation Menu -->
+    <header class="topnav">
+      <a href="/index.html" class="active">Junior Developer</a>
+      <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+          <a href="/contact.html">Contact</a>
+          <a href="/about.html">About</a>
+        </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      Menu
+      </a>
     </header>
-    <main>
-      <!-- <h1>{{ page.title }}</h1>
-        <span>{{ page.date | date: "%Y-%m-%d" }}</span>
-        {{ content }} -->
+    <div class="main">
       <h1>{{ page.title }}</h1>
         <span>{{ page.date | date: "%Y-%m-%d" }}</span>
         {{ content }}
-    </main>
-    <footer>
+    </div>
+    <div class="footer">
       <span>Copyright &copy; 2020 Joanna Klosinska</span><br>
       <span>Made with &#x2764;, <a href="https://jekyllrb.com/">Jekyll</a> and 
         <a href="https://pages.github.com/">GitHub Pages</a></span>
-    </footer>
+    </div>
   </div>
   <script>
     function myFunction() {
