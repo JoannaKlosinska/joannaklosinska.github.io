@@ -11,11 +11,11 @@ If you have any questions, write to me!
   method="POST"
 >
   <label>
-    <p>Your Name:</p>
+    <p>Name:</p>
     <input type="text" name="name">
   </label>
   <label>
-    <p>Your Email:</p>
+    <p>Email:</p>
     <input type="email" name="_replyto">
   </label>
   <label>
