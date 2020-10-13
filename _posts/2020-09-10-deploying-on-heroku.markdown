@@ -28,7 +28,7 @@ In the end deploy your code:
 {% highlight ruby %}
 $ git push heroku master
 {% endhighlight %}
-Any time when you want to deploy changes in your application, use <b>git push heroku</b>. And that is all!
+Any time when you want to deploy changes in your application, use <b>git push heroku</b>. And this is all!
 
 
 

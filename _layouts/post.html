@@ -2,17 +2,21 @@
 ---
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  body {
+    margin: 0px 50px;
+  }
   a, p, h1, h2, h3, h4, h5, h6, span {
     font-family: Lato,"Helvetica Neue",sans-serif;
     color: #424949;
   }
+  h1, h2 {
+    margin-bottom: 0px;
+    letter-spacing: 4px;
+  }
   a, p {
     font-size: 1.2rem;
     text-align: justify;
-  }
-  li {
-    list-style-type: none;
-    padding: 20px 0;
+    letter-spacing: 1px;
   }
   span {
     color: gray; 
@@ -25,17 +29,22 @@
   .flexbox-container {
     display: flex;
     justify-content: space-between;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .flexbox-item {
-    width: 1200px;
+  .flexbox-container h1 {
+    border-bottom: 1.5px solid #CFD8DC;
+    padding-bottom: 10px;
   }
-  .flexbox-item-1 {
-    height: 100px;
-    padding: 10px;
+  .flexbox-item-1 a {
+    text-decoration: none;
+  }
+  .flexbox-item-1 a:hover {
+    color: #CFD8DC;
   }
   .flexbox-item-2 {
-    padding: 10px; 
+    max-width: 500px;
   }
   .footer {
     display: inline-block;
@@ -105,12 +114,15 @@
     border: 1px solid #eee;
     margin-left: -2px;
     margin-right: -2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #ffffff;
     display: inline-block;
     text-decoration: none;
+    text-align: center;
   }
   .pagination a:hover {
-    background-color: #f1f1f1;
+    background-color: #CFD8DC;
     color: #333;
   }
 
