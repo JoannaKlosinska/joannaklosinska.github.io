@@ -4,17 +4,16 @@ title: About
 permalink: /about.html
 ---
 
-My name is Joanna and I decided to start learning Ruby, because it is a begginer-friendly language and you can make a lot of different web applications using it.<br>
-
+Hi! My name is Joanna, I am a beginner developer and spend most of my time on learning new technologies. I am working on my own web application, using Ruby, HTML and CSS.
 
 <h2>My skills:</h2>
-Ruby <br>
-Ruby on Rails <br>
-HTML 5 <br>
-CSS 3 <br>
-Bootstrap 4 <br>
+Ruby 2.7+ <br>
+Rails 6.0+ <br>
+HTML5 <br>
+CSS3 <br>
+Bootstrap4 <br>
 JavaScript <br>
-Git <br>
+GIT <br>
+GitHub <br>
+Heroku <br>
 macOS <br>
-
-I am a beginner, but I am still learning :)
