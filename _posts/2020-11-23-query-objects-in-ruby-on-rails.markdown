@@ -15,6 +15,7 @@ What are the most important features of the query object?
 Query objects are usually located in <b>app/queries</b> directory, typical file name starts with <b>_query</b> and class name starts with <b>Query</b>. <br>
 I will show you an example for my own application. <br>
 I had a very long line of code in my view file. It looked ugly:
+<div class="code">
 {% highlight ruby %}
 <%= f.select :coach_id,
 Coach.joins(:schedule)
@@ -24,23 +25,29 @@ Coach.joins(:schedule)
 ).collect { |c| [ c.name, c.id ] }, 
 include_blank: true %>
 {% endhighlight %}
+</div>
 It's very hard to understand, what's going on here, right? <br>
 First of all, I decided which part of code can became a query object. Then I created a special file and named it <b>available_coaches_query.rb</b>. I saved this file in my special directory <b>services</b>, where I keep specially created classes. My query object looks like this:
+<div class="code">
 {% highlight ruby %}
 class AvailableCoachesQuery
   def self.at(booking_datetime)
     Coach.joins(:schedule)
-      .where("schedules.#{booking_datetime.strftime("%A").downcase} && ?", "{#{booking_datetime.hour}}")
+      .where("schedules.#{booking_datetime.strftime("%A").downcase} && ?", 
+      "{#{booking_datetime.hour}}")
       .where.not(
        id: Coach.joins(:bookings).where(bookings: { time: booking_datetime })
        )
   end
 end
 {% endhighlight %}
-My final version code in my view file looks like this:
+</div>
+Final version of code in my view file looks like this:
+<div class="code">
 {% highlight ruby %}
 <%= f.select :coach_id,
 AvailableCoachesQuery.at(booking_datetime).collect { |c| [ c.name, c.id ] },
 include_blank: true %>
 {% endhighlight %}
+</div>
 It's short, simple to read and pretty now.

@@ -6,10 +6,12 @@ categories: ruby
 ---
 Today I will write about three methods in Ruby. I decided to write about it in one post, because, firstly, I heard about them in the same day and, secondly, it isn't necessary to write three posts about every of them - in my opinion they aren't so complicated. <br>
 Let's start with first of this methods - <b>rand()</b>. This is very helpful when you need to generate random number or string from specific collection, array etc. This is really easy! Look - in this example, I want to choose one number from 7 to 21 and also need to write it as a string:
+<div class="code">
 {% highlight ruby %}
 rand(7..21).to_s
 => "15"
 {% endhighlight %}
+</div>
 And that's all! It is good to remember that <b>rand()</b> can be use in three ways:
 <ul class="list">
   <li>when you don't give any arguments, rand gives you a number from 0 to 1 (for example 0.4836732493)
@@ -18,22 +20,27 @@ And that's all! It is good to remember that <b>rand()</b> can be use in three wa
   <li>you can use rand like me in the example above (rand(7..21)) and it gives you a random number between the start of the range and the end of the range</li>
 </ul>
 It is time to write about second method - <b>.uniq</b>. It helps to remove duplicates. It is also very easy. For example, we have a specific array and we want to remove repeating numbers.
+<div class="code">
 {% highlight ruby %}
 array = [1, 1, 1, 2, 2, 3, 3, 3]
 array.uniq
 => [1, 2, 3]
 {% endhighlight %}
+</div>
 Remember that this method returns a <b>new</b> array with unique numbers - it won't change the original array. <br>
 We can also use .uniq to remove things because of the length, class etc. Here we have an example:
+<div class="code">
 {% highlight ruby %}
 animals = ["dog", "cat", "parrot", "spider"]
 animals.uniq(&:size)
 => ["dog", "parrot"]
 {% endhighlight %}
+</div>
 We can see that in our new array we have only two strings - .uniq remove strings with the same length as the others.
 Finally, I can write something about <b>.send</b> method in Ruby. I found the information that this method "sends a message to an object instance and its ancestors in class hierarchy until some method reacts (because its name matches the first argument)." When you call a method, you <b>sending</b> that object a message. <br>
 It is very helpful when you have a class with many methods and every of these method also have a few attributes. You want to call all of these methods on your object. If you try to do it step by step, method by method, you will loose a lot of lines of code and waste your time. You can do it faster with .send - just call .send method on an object and write all methods in brackets just in one line. <br>
 This method can, for example, be use to call private or protected method from outside a specific class:
+<div class="code">
 {% highlight ruby %}
 class Movie
   def title
@@ -54,5 +61,6 @@ movie.best_actor
 movie.send(:best_actor)
 => "Leonardo DiCaprio"
 {% endhighlight %}
+</div>
 
 It is good to remember that there is also a method <b>.send_public</b> which not allow you to get to private methods.

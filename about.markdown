@@ -4,20 +4,19 @@ title: About
 permalink: /about.html
 ---
 
-Hi! My name is Joanna, I am a beginner developer and spend most of my time on learning new technologies. I am working on my own web application, using Ruby, HTML and CSS. I am also still doing courses, tutorials and guides to improve my skills.
+Hi! My name is Joanna, I am self-taught beginner software developer. I am learning through working on my own projects, using Ruby, HTML, CSS & JavaScript. I am also still doing courses, tutorials and guides to improve my skills. This blog is my own place on the Internet. <br>
+You can find me on [Github].
 
 <h2>My skills:</h2>
-Web development:
 - <p>Ruby 2.7+ </p>
 - <p>Rails 6.0+</p>
 - <p>HTML5</p>
 - <p>CSS3</p>
 - <p>Bootstrap4</p>
 - <p>JavaScript</p>
-
-Miscellanous:
+- <p>SQL</p>
 - <p>GIT</p>
 - <p>GitHub</p>
 - <p>Heroku</p>
-- <p>macOS</p>
 
+[Github]: https://github.com/JoannaKlosinska

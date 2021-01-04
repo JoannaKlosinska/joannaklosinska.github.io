@@ -1,195 +1,190 @@
 ---
 ---
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-  body {
-    margin: 0px 50px;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+  background-color: #F2F4F4;
+  font-family: 'Lato', sans-serif;
+}
+/* Style the navigation menu */
+.topnav {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  background: #48C9B0;
+  padding: 15px;
+  text-align: center;
+}
+.logo {
+  display: block;
+}
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+.logo a:hover {
+  color: black;
+}
+.mylinks {
+  padding-top: 10px;
+}
+.mylinks a {
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 5px;
+}
+.mylinks a:hover {
+  color: black;
+}
+/* Flexbox */
+.header h1 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.post {
+  margin: 3px;
+  border: 1px solid white;
+  border-radius: 3px;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.post:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.post h2 {
+  letter-spacing: 1px;
+}
+.post a {
+  text-decoration: none;
+  color: black;
+}
+/* Content */
+.content {
+  font-size: 20px;
+  line-height: 1.6;
+}
+.content h1 {
+  letter-spacing: 2px;
+}
+.content a {
+  color: #48C9B0;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.code {
+  background-color: white;
+}
+/* Contact form */
+.form {
+  text-align: center;
+  color: black;
+}
+.field {
+  padding: 7px 0;
+}
+input, textarea {
+  width: 300px;
+  border: 0;
+  margin: 10px 0;
+  border-bottom: 2px solid black;
+  background: transparent;
+  color: black;
+}
+input::placeholder, textarea::placeholder {
+    color: black;
+    font-family: 'Lato', sans-serif;
   }
-  a, p, h1, h2, h3, h4, h5, h6, span {
-    font-family: "Helvetica Neue",sans-serif;
-    color: #424949;
-  }
-  h1, h2 {
-    margin-bottom: 0px;
-    letter-spacing: 4px;
-  }
-  a, p {
-    font-size: 1.2rem;
-    text-align: justify;
-    letter-spacing: 1px;
-  }
-  span {
-    color: gray; 
-  }
-  .list {
-    font-family: "Helvetica Neue",sans-serif;
-    color: #424949;
-    font-size: 1.2rem;
-  }
-  .flexbox-container {
-    display: flex;
-    justify-content: space-between;
+textarea {
+  height: 70px;
+}
+input[type=submit] {
+  color: black;
+  background-color: white;
+  border: 1px solid #F2F4F4;
+  height: 50px;
+  border-radius: 3px;
+}
+input[type=submit]:hover {
+  background-color: #48C9B0;
+  color: white;
+}
+/* Footer */
+.footer {
+  text-align: center;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+/* Pagination */
+.pagination {
+  text-align: center;
+}
+.pagination a, .pagination span {
+  padding: 7px 18px;
+  border: 1px solid #F2F4F4;
+  border-radius: 3px;
+  margin-left: -2px;
+  margin-right: -2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  width: 50px;
+  font-size: 15px;
+}
+.pagination a:hover {
+  background-color: #48C9B0;
+  color: white;
+}
+/* Media Queries */
+@media only screen and (max-width: 720px) {
+  .flexbox {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
-  .flexbox-container h1 {
-    border-bottom: 1.5px solid #CFD8DC;
-    padding-bottom: 10px;
-  }
-  .flexbox-item-1 a {
-    text-decoration: none;
-  }
-  .flexbox-item-1 a:hover {
-    color: #CFD8DC;
-  }
-  .flexbox-item-2 {
-    max-width: 500px;
-  }
-  .footer {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
-  .footer a {
-    color: gray;
-    font-size: 1rem;
-  }
-  .main {
-    margin: auto;
-  }
-  /* Style the navigation menu */
-  .topnav {
-    overflow: hidden;
-    background-color: #D6EAF8;
-    position: relative;
-  }
-
-  /* Hide the links inside the navigation menu (except for logo/home) */
-  .topnav #myLinks {
-    display: none;
-  }
-
-  /* Style navigation menu links */
-  .topnav a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: large;
-    display: block;
-    font-family: "Helvetica Neue",sans-serif;
-    letter-spacing: 4px;
-  }
-
-  /* Style the hamburger menu */
-  .topnav a.icon {
-    background: #D6EAF8;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  /* Add a grey background color on mouse-over */
-  .topnav a:hover {
-    background-color: #AED6F1;
-    color: black;
-  }
-
-  /* Style the active link (or home/logo) */
-  .active {
-    background-color: #D6EAF8;
-    color: white;
-  }
-  @media (max-width: 400px) {
-    .main {
-      width: 100%;
-    }
-  }
-
-  /* Pagination */
-  .pagination a, .pagination span {
-    padding: 7px 18px;
-    border: 1px solid #eee;
-    margin-left: -2px;
-    margin-right: -2px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-  }
-  .pagination a:hover {
-    background-color: #CFD8DC;
-    color: #333;
-  }
-
-  /* Contact Form */
-  input {
-    width: 300px;
-  }
-  textarea {
-    width: 300px;
-    height: 100px;
-    margin-bottom: 15px;
-  }
-  input[type="submit"] {
-    width: 90px;
-    height: 40px;
-    font-family: "Helvetica Neue",sans-serif;
-    text-decoration: none;
-    font-size: large;
-    background: #D6EAF8;
-    letter-spacing: 4px;
-    border: #D6EAF8;
-    border-radius: 3px;
-  }
-  input[type="submit"]:hover {
-    background-color: #AED6F1;
-    color: black;
-    border: none;
-  }
+}
 
 </style>
-
 <body>
-  <!-- Top Navigation Menu -->
-    <header class="topnav">
-      <a href="/index.html" class="active">Junior Developer</a>
-      <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-          <a href="/contact.html">Contact</a>
-          <a href="/about.html">About</a>
-        </div>
-    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      Menu
-      </a>
-    </header>
-    <div class="main">
-      <h1>{{ page.title }}</h1>
-        <span>{{ page.date | date: "%Y-%m-%d" }}</span>
-        {{ content }}
+  <header class="topnav">
+    <div class="logo">
+      <a href="/index.html">Junior Developer.</a>
     </div>
-    <div class="footer">
-      <span>Copyright &copy; 2020 Joanna Klosinska</span><br>
-      <span>Made with &#x2764;, <a href="https://jekyllrb.com/">Jekyll</a> and 
-        <a href="https://pages.github.com/">GitHub Pages</a></span>
+    <div class="mylinks">
+      <a href="/projects.html">Projects</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
     </div>
+  </header>
+  <div class="content">
+    <h1>{{ page.title }}</h1>
+      {{ page.date | date: "%Y-%m-%d" }}
+      {{ content }}
   </div>
-  <script>
-    function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
-  </script>
+  <div class="footer">
+    Copyright &copy; 2020 Joanna Klosinska<br>
+    Made with &#x2764;, <a href="https://jekyllrb.com/">Jekyll</a> and 
+      <a href="https://pages.github.com/">GitHub Pages</a>
   </div>
-</body>
+ </body>
 
 
