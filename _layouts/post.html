@@ -1,10 +1,17 @@
 ---
 ---
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 body {
   background-color: #F2F4F4;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+a {
+  color: #48C9B0;
+  text-decoration: none;
+}
+a:hover {
+  color: #A3E4D7;
 }
 /* Style the navigation menu */
 .topnav {
@@ -45,14 +52,16 @@ body {
 .header h1 {
   text-align: center;
   letter-spacing: 2px;
+  margin: 0 40px;
 }
 .flexbox {
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  margin: 0 40px;
 }
-.post {
+.box {
   margin: 3px;
   border: 1px solid white;
   border-radius: 3px;
@@ -64,28 +73,20 @@ body {
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   transition: box-shadow 0.3s ease-in-out;
 }
-.post:hover {
+.box:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
-.post h2 {
+.box h2 {
   letter-spacing: 1px;
-}
-.post a {
-  text-decoration: none;
-  color: black;
 }
 /* Content */
 .content {
   font-size: 20px;
   line-height: 1.6;
+  margin: 0 40px;
 }
 .content h1 {
   letter-spacing: 2px;
-}
-.content a {
-  color: #48C9B0;
-  text-decoration: none;
-  font-weight: lighter;
 }
 .code {
   background-color: white;
@@ -108,7 +109,7 @@ input, textarea {
 }
 input::placeholder, textarea::placeholder {
     color: black;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
 textarea {
   height: 70px;
@@ -123,10 +124,6 @@ input[type=submit] {
 /* Footer */
 .footer {
   text-align: center;
-}
-.footer a {
-  text-decoration: none;
-  color: black;
 }
 /* Pagination */
 .pagination {

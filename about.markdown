@@ -1,9 +1,10 @@
 ---
 layout: post
-title: About
 permalink: /about.html
 ---
-
+<div class="header">
+  <h1>About</h1>
+</div>
 Hi! My name is Joanna, I am self-taught beginner software developer. I am learning through working on my own projects, using Ruby, HTML, CSS & JavaScript. I am also still doing courses, tutorials and guides to improve my skills. This blog is my own place on the Internet. <br>
 You can find me on [Github].
 
