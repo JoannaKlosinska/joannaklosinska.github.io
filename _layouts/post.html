@@ -103,10 +103,11 @@ input, textarea {
   width: 300px;
   border: 0;
   margin: 10px 0;
-  border-bottom: 2px solid black;
-  background: transparent;
+  border: 1px solid white;
+  background: white;
   color: black;
 }
+
 input::placeholder, textarea::placeholder {
     color: black;
     font-family: 'Source Sans Pro', sans-serif;
@@ -153,6 +154,9 @@ input[type=submit] {
 @media only screen and (max-width: 720px) {
   .flexbox {
     flex-direction: column;
+  }
+  .highlight pre{
+    white-space: pre-wrap;
   }
 }
 
