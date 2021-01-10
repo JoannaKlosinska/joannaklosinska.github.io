@@ -19,9 +19,11 @@ I had a very long line of code in my view file. It looked ugly:
 {% highlight ruby %}
 <%= f.select :coach_id,
 Coach.joins(:schedule)
-  .where("schedules.#{booking_datetime.strftime("%A").downcase} && ?", "{#{booking_datetime.hour}}")
+  .where("schedules.#{booking_datetime.strftime("%A").
+        downcase} && ?", "{#{booking_datetime.hour}}")
   .where.not(
-  id: Coach.joins(:bookings).where(bookings: { time: booking_datetime })
+  id: Coach.joins(:bookings).
+  where(bookings: { time: booking_datetime })
 ).collect { |c| [ c.name, c.id ] }, 
 include_blank: true %>
 {% endhighlight %}
@@ -33,10 +35,11 @@ First of all, I decided which part of code can became a query object. Then I cre
 class AvailableCoachesQuery
   def self.at(booking_datetime)
     Coach.joins(:schedule)
-      .where("schedules.#{booking_datetime.strftime("%A").downcase} && ?", 
-      "{#{booking_datetime.hour}}")
+      .where("schedules.#{booking_datetime.strftime("%A").
+            downcase} && ?", "{#{booking_datetime.hour}}")
       .where.not(
-       id: Coach.joins(:bookings).where(bookings: { time: booking_datetime })
+       id: Coach.joins(:bookings).
+       where(bookings: { time: booking_datetime })
        )
   end
 end
@@ -46,7 +49,8 @@ Final version of code in my view file looks like this:
 <div class="code">
 {% highlight ruby %}
 <%= f.select :coach_id,
-AvailableCoachesQuery.at(booking_datetime).collect { |c| [ c.name, c.id ] },
+AvailableCoachesQuery.at(booking_datetime).
+collect { |c| [ c.name, c.id ] },
 include_blank: true %>
 {% endhighlight %}
 </div>
