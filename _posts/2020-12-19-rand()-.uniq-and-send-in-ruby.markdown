@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Rand(), .Uniq, And .Send In Ruby"
+title: "Rand(), .Uniq And .Send In Ruby"
 date: 2020-12-19
 categories: ruby
 ---
