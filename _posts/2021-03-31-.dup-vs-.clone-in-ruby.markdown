@@ -1,0 +1,57 @@
+---
+layout: post
+title: ".Dup VS .Clone In Ruby"
+date: 2021-03-31
+categories: ruby
+---
+In Ruby we have some methods which mean and do the same (for example map & collect). Some of them are more preferred than others. In Ruby there are also methods which are very similar, but do slightly different activities. <b>.dup</b> and <b>.clone</b> are perfect examples of methods like this. I will write more about them in this post. <br>
+I had a little problem with this methods, because, at first glance, they have the same function:
+<div class="code">
+{% highlight ruby %}
+a = 7
+b = a.clone #=> 7
+c = a.dup #=> 7
+{% endhighlight %}
+</div> 
+However, they have also differences. <br>
+.clone has two more functions than .dup:
+<ul class="list">
+  <li>copy the singleton class of the copied object</li>
+  <li>maintain the frozen status of the copied object</li>
+</ul>
+We can see it in the examples: <br>
+.dup:
+<div class="code">
+{% highlight ruby %}
+a = Object.new
+def a.foo; :foo end
+p a.foo #=> :foo
+b = a.dup
+p b.foo #=> undefined method `foo' for #<Object:0x007f8bc395ff00> (NoMethodError)
+{% endhighlight %}
+</div> 
+.clone:
+<div class="code">
+{% highlight ruby %}
+a = Object.new
+def a.foo; :foo end
+p a.foo #=> :foo
+b = a.clone
+p b.foo #=> :foo
+{% endhighlight %}
+</div> 
+frozen status:
+<div class="code">
+{% highlight ruby %}
+a = Object.new
+a.freeze
+p a.frozen? #=> true
+b = a.dup
+p b.frozen? #=> false
+c = a.clone
+p c.frozen? #=> true
+{% endhighlight %}
+</div>
+What is more, we can see differences between these two methods in ActiveRecord. <br>
+.dup creates a new object without any id, so you can save new object in the database with save. <br>
+.clone creates a new object with the same id, so all the changes made to that new object will overwrite the original record when you save it.
